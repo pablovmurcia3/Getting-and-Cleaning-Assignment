@@ -1,10 +1,11 @@
 ---
-title: "CODE BOOK"
 date: "21/7/2020"
-output: html_document
 ---
 
-### Contents
+## **CODE BOOK**
+
+## Contents
+
 
 1. instructions to read the final tidy table 
 2. interpretation of the rows (observations)
