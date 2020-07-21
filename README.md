@@ -1,4 +1,4 @@
----
+--- 
 title: "README"
 author: "Pablo Velásquez"
 date: "20/7/2020"
@@ -10,5 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## README 
+
+
+```{r cars}
+table <- read.table("finalTidy.txt", header = TRUE)
+```
+
 
 

@@ -32,7 +32,7 @@ testDB <- cbind(subject_test, y_test, X_test)
 trainDB <- cbind(subject_train, y_train, X_train)
 
 
-                            ## Part 1 Merging the data sets ##
+                            ## PART 1 Merging the data sets ##
 
 # merge datasets
 mergeDB <- rbind(testDB,trainDB)
@@ -42,14 +42,14 @@ mergeDB <- rbind(testDB,trainDB)
 colnames(mergeDB) <- c("subject", "activity", features)
 
 
-                        ## Part 2 Extracting only the measurements ##
-                          ## on the mean and standard deviation ##
+                       ## PART 2 Extracting only the measurements ##
+                         ## on the mean and standard deviation ##
 
 mergeDBsub <- mergeDB[, grepl("subject|activity|mean[()]|std()", colnames(mergeDB))] 
 
 
-                        ## Part 3 Using descriptive activity names ##
-                         ## to name the activities in the data set ##
+                    ## PART 3 Using descriptive activity names ##
+                    ## to name the activities in the data set ##
 
 
 mergeDBsub$activity <- as.factor(mergeDBsub$activity)
@@ -60,8 +60,8 @@ levels(mergeDBsub$activity) <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTA
 mergeDBsub$activity <- tolower(mergeDBsub$activity)
 
 
-                     ## Part 4: label the data set with descriptive ## 
-                                ## variable names ## 
+                   ## PART 4: label the data set with descriptive ## 
+                              ## variable names ## 
 
 
 # the data already have names, so in this step I limited to clean the names
@@ -71,8 +71,8 @@ colnames(mergeDBsub) <- gsub("-",".", colnames(mergeDBsub))
 colnames(mergeDBsub) <- gsub("()","", fixed = TRUE, colnames(mergeDBsub))
 
 
-                    ## Part 5: creating data set with the average of ##
-                  ## each variable for each activity and each subject ##
+                 ## PART 5: creating data set with the average of ##
+               ## each variable for each activity and each subject ##
 
 library(dplyr)
 
@@ -82,3 +82,4 @@ finalTidy <- mergeDBsub %>% group_by(subject, activity) %>% summarize_all(mean)
 write.table(finalTidy, file = "finalTidy.txt", row.name=FALSE)
 
 table <- read.table("finalTidy.txt", header = TRUE)
+################### Don´t forget to set Header = TRUE in the read.table command :)
