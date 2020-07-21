@@ -75,7 +75,7 @@ colnames(mergeDBsub) <- gsub("()","", fixed = TRUE, colnames(mergeDBsub))
 
 
                  ## PART 5: creating data set with the average of ##
-               ## each variable for each activity and each subject ##
+               ## each variable for each activity and each subject  ##
 
 library(dplyr) # load the dplyr package in order to manipulate the merged data set
 
