@@ -13,14 +13,12 @@ date: "21/7/2020"
 
 ## 1. instructions to read the final tidy table 
 
-in order to read de table, download the table in your current directory and
-use the following command:
+As is explained in the Readme, in order to read de table download the table in your current directory and use the following command:
 
 read.table("finalTidy.txt", header = TRUE)
 
-as you can see, I decided to create the tidy table in the *wide* format. So the
+as you can see, I decided to create a tidy table in the *wide* format. So the
 dimension is 180 rows x 68 columns. 
-
 
 
 ## 2. interpretation of the rows (observations)
@@ -28,18 +26,17 @@ dimension is 180 rows x 68 columns.
 Each row is an observation that, in the case of the wide format, corresponds to 
 a combination between subject and activity. 
 
-For instance the 180 rows of the table represent all the posible combination between 
-the 30 individuals of the study and the 6 activities that they permorm (30 x 6 = 180)
+For instance, the 180 rows of the table represent all the possible combination between the 30 individuals of the study and the 6 activities that they perform (30 x 6 = 180)
 
 ## 3. interpretation of the columns (variables)
 
-The table have 68 variables. The  first two correspond to the subject index (1-30)
+The table has 68 variables. The  first two correspond to the subject index (1-30)
 and to the activities (1-6). 
 
-The next 66 variables  are averages of some selected features. As I explained in the README and run_analysis.R files, the selected fetures were the ones that contains the meassurments of the mean and the standard deviation. 
+The next 66 variables are averages of some selected features. As I explained in the README and run_analysis.R files, the selected features were the ones that contain the measurements  of the mean and the standard deviation. 
 
-SO the finalTidy table contains iformation of the average of multiple features for
-each subject and each activity
+SO the finalTidy table contains information of the average of multiple features for
+each subject and each activity.
 
 
 In the following list the 68 variables of the table:
