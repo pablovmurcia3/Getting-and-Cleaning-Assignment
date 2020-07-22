@@ -1,6 +1,3 @@
----
-date: "21/7/2020"
----
 
 ## **CODE BOOK**
 
@@ -15,7 +12,7 @@ date: "21/7/2020"
 
 As is explained in the Readme, in order to read de table download the table in your current directory and use the following command:
 
-read.table("finalTidy.txt", header = TRUE)
+finalTidy <- read.table("finalTidy.txt", header = TRUE)
 
 as you can see, I decided to create a tidy table in the *wide* format. So the
 dimension is 180 rows x 68 columns. 
