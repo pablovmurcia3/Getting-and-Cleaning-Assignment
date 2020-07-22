@@ -85,4 +85,5 @@ finalTidy <- mergeDBsub %>% group_by(subject, activity) %>% summarize_all(mean)
 
 write.table(finalTidy, file = "finalTidy.txt", row.name=FALSE)
 
+finalTidy  <- read.table("finalTidy.txt", header = TRUE)
 ##### Don´t forget to set Header = TRUE in the read.table command :) ###########
