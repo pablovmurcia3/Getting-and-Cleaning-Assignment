@@ -1,11 +1,10 @@
 --- 
 title: "README"
-date: "20/7/2020"
 output: html_document
 ---
 
 
-## **Readme**
+## **Getting and Cleaning Data Assignment**
 
 This is a repo containing the material for the final assignment of the Getting and Cleaning Data Course
 
@@ -24,7 +23,7 @@ each subject and each activity.
 
 To read it please use the following code:
 
-read.table("finalTidy.txt", header = TRUE)
+finalTidy <- read.table("finalTidy.txt", header = TRUE)
 
 make sure to have the file in your working directory. 
 
@@ -36,9 +35,9 @@ the raw data and put it in your working directory. You can do this using the thr
 
 the raw data contains information of sensors (accelerometer and gyroscope of Samsung Galaxy II) that monitored 30 subjects performing six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
 
-## Code
+## Description of Code
 
-In short words the code process the raw data to get a tidy table in a *wide* format.
+In short, the code process the raw data to get a tidy table in a *wide* format.
 
 in order to do it, the code is divided into 6 parts. In the first part, the raw data is downloaded and read. Then, the different parts of the data (X_test/train, subject_test/train, y_test/train) are organized in two specific data sets, train data set and test data set.
 
