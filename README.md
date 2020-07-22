@@ -1,8 +1,5 @@
---- 
-title: "README"
-output: html_document
----
 
+## **README**
 
 ## **Getting and Cleaning Data Assignment**
 
